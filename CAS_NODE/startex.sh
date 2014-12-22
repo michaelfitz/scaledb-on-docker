@@ -32,9 +32,9 @@ Pocasip=`cat t22     | grep $casname"_.*TCP_ADDR" | cut -d '=' -f 2`
 echo $Pocasip >t23
 
 
-scaledb_cas_server_ips=${CAS_IP}
-scaledb_cas_server_ports=${CAS_PORT}
-
+#scaledb_cas_server_ips=${CAS_IP}
+#scaledb_cas_server_ports=${CAS_PORT}
+scaledb_cas_server_ips=``
 
 
 #sed -e "s|OPENSHIFT_MARIADB_DB_HOST|${CAS_IP}|" cas.cnf.1 > cas.cnf.2
@@ -68,9 +68,16 @@ echo "-CAS--"$Pocasip
         break
     fi
 
+
+
+     if [ -z "$scaledb_cas_server_ips" ];then
+        scaledb_cas_server_ips="$casip"
+        scaledb_cas_server_ports="$casport"
+        echo $scaledb_cas_server_ips > t89
+     else
         scaledb_cas_server_ips="$scaledb_cas_server_ips,$casip"
         scaledb_cas_server_ports="$scaledb_cas_server_ports,$casport"
-
+     fi
     casid=$(($casid+1))
 done
 
