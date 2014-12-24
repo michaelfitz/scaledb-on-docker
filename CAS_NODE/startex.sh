@@ -96,6 +96,5 @@ sed -e "s|OPENSHIFT_MARIADB_DB_HOST|${scaledb_cas_server_ips}|" cas.cnf.1 > cas.
 sed -e "s|OPENSHIFT_MARIADB_DB_PORT|${scaledb_cas_server_ports}|" cas.cnf.2 > cas.cnf
 
 
-
-/scaledb-0.2.5/lib/scaledb_cas   cas.cnf $CAS_IP $CAS_PORT 
-
+/scaledb-0.2.5/lib/scaledb_cas   cas.cnf 0.0.0.0 $CAS_PORT
+/bin/bash
