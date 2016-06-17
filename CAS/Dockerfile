@@ -11,7 +11,7 @@ RUN apt-get install libaio1
 #RUN tar xvf  scaledb-0.2.5.tar && \
 #    rm scaledb-0.2.5.tar
 
-RUN /usr/bin/wget pub.scaledb.com/dump/7a065244ed65b3079e8227f3dfdca8eb/scaledb-0.2.6-7510.tar.gz
+RUN /usr/bin/wget http://downloads.scaledb.com/2a4394f731aa13e965eeb2c09f78543e/scaledb-16.04/scaledb-16.04.01/scaledb-ude-16.04.01-P18863.deb
 RUN gunzip scaledb-0.2.6-7510.tar.gz
 RUN tar xvf  scaledb-0.2.6-7510.tar
 RUN mv scaledb-0.2.6-7510 scaledb-0.2.5
