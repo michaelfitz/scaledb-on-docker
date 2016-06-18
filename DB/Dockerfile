@@ -8,10 +8,6 @@ RUN apt-get install libaio1
 
 
 
-#RUN /usr/bin/wget   pub.scaledb.com/dump/mariadb-10.0.12-linux-x86_64-small.tar.gz
-#RUN gunzip mariadb-10.0.12-linux-x86_64-small.tar.gz
-#RUN tar xvf  mariadb-10.0.12-linux-x86_64-small.tar  
-
 RUN /usr/bin/wget http://downloads.scaledb.com/2a4394f731aa13e965eeb2c09f78543e/scaledb-16.04/scaledb-16.04.01/scaledb-mariadb-16.04.01-10.1.13.tgz
 RUN gunzip scaledb-mariadb-16.04.01-10.1.13.tgz
 RUN tar xvf scaledb-mariadb-16.04.01-10.1.13.tar
