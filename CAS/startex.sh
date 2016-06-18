@@ -1,11 +1,11 @@
 #!/bin/bash
 
-mkdir data
-mkdir logs
-chmod +x /scaledb-0.2.5/lib/scaledb_cas
-chmod +x /scaledb-0.2.5/lib/scaledb_slm
+#mkdir data
+#mkdir logs
+chmod +x /usr/local/scaledb/lib/scaledb_cas
+chmod +x /usr/local/scaledb/lib/scaledb_slm
 
-export LD_LIBRARY_PATH=/scaledb-0.2.5/lib:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/usr/local/scaledb/lib:${LD_LIBRARY_PATH}
 
 
 
@@ -90,5 +90,5 @@ sed -e "s|OPENSHIFT_MARIADB_DB_PORT|${scaledb_cas_server_ports}|" cas.cnf.2 > ca
 
 
 
-/scaledb-0.2.5/lib/scaledb_cas   cas.cnf $CAS_IP $CAS_PORT 
+/usr/local/scaledb/lib/scaledb_cas   cas.cnf $CAS_IP $CAS_PORT 
 
