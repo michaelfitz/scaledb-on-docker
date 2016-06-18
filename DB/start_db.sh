@@ -31,9 +31,9 @@ cp /usr/local/scaledb/lib/ha_scaledb.so /usr/local/mariadb/lib/plugin
 
 
 /usr/local/mariadb/scripts/mysql_install_db  --basedir=/usr/local/mariadb --defaults-file=/my.cnf
-/mariadb-10.0.12-linux-x86_64/bin/mysqld --defaults-file=/my.cnf  --user=root &
+/usr/local/mariadb/bin/mysqld --defaults-file=/my.cnf  --user=root &
 sleep 10
-/mariadb-10.0.12-linux-x86_64/bin/mysql  -uroot -e "INSTALL PLUGIN scaledb SONAME 'ha_scaledb.so'"
-echo "GRANT ALL ON *.* to root@'%'; flush privileges;" | /mariadb-10.0.12-linux-x86_64/bin/mysql -uroot 
+/usr/local/mariadb/bin/mysql  -uroot -e "INSTALL PLUGIN scaledb SONAME 'ha_scaledb.so'"
+echo "GRANT ALL ON *.* to root@'%'; flush privileges;" | //usr/local/mariadb/bin/mysql -uroot 
 
 /bin/bash
