@@ -3,7 +3,7 @@
 ##mkdir scaledb/data
 ##mkdir scaledb/logs
 
-export LD_LIBRARY_PATH=/usr/local/scaledb/lib#:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=/usr/local/scaledb/lib:${LD_LIBRARY_PATH}
 
 
 
