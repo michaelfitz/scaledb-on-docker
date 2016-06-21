@@ -26,7 +26,7 @@ RUN mv usr/local/scaledb-ude-16.04.01-P18863 /usr/local/scaledb
 ADD ./start.sh /start.sh
 ADD ./cas.cnf.1  /cas.cnf.1
 ADD ./startex.sh /startex.sh
-CMD ./startex.sh
+
 
 RUN echo 'root:screencast' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
