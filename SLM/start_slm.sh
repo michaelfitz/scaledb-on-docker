@@ -19,11 +19,6 @@ echo "SLM_IP= "$CAS_IP
 
 
 
-sed -e "s|OPENSHIFT_MARIADB_DB_HOST|${CAS_IP}|" slm.cnf.1  > slm.cnf.2
-sed -e "s|CASP_PORT_4306_TCP_PORT|${CASP_PORT_4306_TCP_PORT}|" slm.cnf.2  > slm.cnf.3
-sed -e "s|CASP_PORT_4306_TCP_ADDR|${CASP_PORT_4306_TCP_ADDR}|" slm.cnf.3  > slm.cnf
-
-
 
 /usr/local/scaledb/lib/scaledb_slm   slm.cnf
 
