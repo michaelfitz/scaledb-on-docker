@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo docker exec -it <container> /startex.sh
+sudo docker exec -it <container> /start_db.sh
