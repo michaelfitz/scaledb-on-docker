@@ -31,5 +31,5 @@ ADD ./start_db.sh /start_db.sh
 ADD ./my.cnf.1  /my.cnf.1
 ADD ./scaledb.cnf.1 /scaledb.cnf.1
 
-CMD ./start_db.sh
+#CMD ./start_db.sh
 
